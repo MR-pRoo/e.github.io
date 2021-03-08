@@ -80,16 +80,13 @@ window.addEventListener('beforeinstallprompt', (e) => {
     if(document.cookie.split(";").indexOf("PWA_Rejec=true") == -1 && document.cookie.split(";").indexOf(" PWA_Rejec=true") == -1 ){
         pwaPrompt.style.display = 'block';
     }
-    window.addEventListener('appinstalled', (e) => {
-      pwaPrompt.style.display = 'none';
-    });
       
     addBtn.addEventListener('click', (e) => {
       pwaPrompt.style.display = 'none';
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult) => {
           if (choiceResult.outcome === 'accepted') {
-            console.log('User accepted the A2HS prompt');
+            pwaPrompt.style.display = 'none';
           } else {
             console.log('User dismissed the A2HS prompt');
           }
