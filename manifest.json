@@ -1,0 +1,44 @@
+
+{
+  "short_name": "أكاديمية ابن مالك",
+  "name": "أكاديمية ابن مالك",
+  "description": "For professional web designers and developers.",
+  "icons": [
+    {
+      "src": "pwa-fav-icons/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "pwa-fav-icons/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "pwa-fav-icons/android-icon-36x36.png",
+      "type": "image/png",
+      "sizes": "36x36"
+    },
+    {
+      "src": "pwa-fav-icons/android-icon-72x72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "pwa-fav-icons/android-icon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "pwa-fav-icons/apple-icon-180x180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+    
+  ],
+  "start_url": "./",
+  "background_color": "#c7b7a9",
+  "theme_color": "#81500e",
+  "display": "standalone",
+  "orientation": "natural"
+}
