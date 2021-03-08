@@ -87,6 +87,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
       deferredPrompt.userChoice.then((choiceResult) => {
           if (choiceResult.outcome === 'accepted') {
             pwaPrompt.style.display = 'none';
+            console.log('User accepted the A2HS prompt');
           } else {
             console.log('User dismissed the A2HS prompt');
           }
