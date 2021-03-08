@@ -80,7 +80,10 @@ window.addEventListener('beforeinstallprompt', (e) => {
     if(document.cookie.split(";").indexOf("PWA_Rejec=true") == -1 && document.cookie.split(";").indexOf(" PWA_Rejec=true") == -1 ){
         pwaPrompt.style.display = 'block';
     }
-
+    window.addEventListener('appinstalled', (e) => {
+      pwaPrompt.style.display = 'none';
+    });
+      
     addBtn.addEventListener('click', (e) => {
       pwaPrompt.style.display = 'none';
       deferredPrompt.prompt();
