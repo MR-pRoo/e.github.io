@@ -73,7 +73,6 @@ let deferredPrompt;
 const pwaPrompt = document.querySelector('.pwa-prompt');
 const addBtn = document.querySelector('.pwa-prompt .btns .accept-button');
 const rejectBtn = document.querySelector('.pwa-prompt .btns .reject-button');
-pwaPrompt.style.display = 'none';
 
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
