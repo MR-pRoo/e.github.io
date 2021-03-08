@@ -74,6 +74,10 @@ const pwaPrompt = document.querySelector('.pwa-prompt');
 const addBtn = document.querySelector('.pwa-prompt .btns .accept-button');
 const rejectBtn = document.querySelector('.pwa-prompt .btns .reject-button');
 
+window.addEventListener('appinstalled', (e) => {
+    console.log(21);
+    pwaPrompt.style.display = 'none';
+});
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
@@ -86,7 +90,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult) => {
           if (choiceResult.outcome === 'accepted') {
-            pwaPrompt.style.display = 'none';
             console.log('User accepted the A2HS prompt');
           } else {
             console.log('User dismissed the A2HS prompt');
