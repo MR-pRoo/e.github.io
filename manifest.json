@@ -2,7 +2,7 @@
 {
   "short_name": "أكاديمية ابن مالك",
   "name": "أكاديمية ابن مالك",
-  "description": "For professional web designers and developers.",
+  "description": ".أكاديمية ابن مالك للتعليم الشرعي وتحفيظ القرأن عن بعد",
   "icons": [
     {
       "src": "pwa-fav-icons/favicon-16x16.png",
@@ -37,6 +37,7 @@
     
   ],
   "start_url": "./",
+  "scope": "./",
   "background_color": "#c7b7a9",
   "theme_color": "#81500e",
   "display": "standalone",
