@@ -1,58 +1,58 @@
-var $body = document.body,
-    $cards = document.querySelectorAll(".card");
+// var $body = document.body,
+//     $cards = document.querySelectorAll(".card");
 
-$body.addEventListener("mousemove", (e) => {
-    xAxes = ((innerWidth / 2) - e.clientX) / ((innerWidth / 2) / 50);
-    yAxes = ((innerHeight / 2) - e.clientY) / ((innerHeight / 2) / 20);
+// $body.addEventListener("mousemove", (e) => {
+//     xAxes = ((innerWidth / 2) - e.clientX) / ((innerWidth / 2) / 50);
+//     yAxes = ((innerHeight / 2) - e.clientY) / ((innerHeight / 2) / 20);
 
-    for (var i = 0; i < $cards.length; i++) {
-        $cards[i].style.transform = `rotateY(${xAxes}deg) rotateX(${yAxes}deg)`;
-    }
+//     for (var i = 0; i < $cards.length; i++) {
+//         $cards[i].style.transform = `rotateY(${xAxes}deg) rotateX(${yAxes}deg)`;
+//     }
 
-})
-$body.addEventListener("mouseout", (e) => {
-    if (!$body.contains(e.toElement)) {
-        for (var i = 0; i < $cards.length; i++) {
-            $cards[i].style.transition = `0.2s `;
-            $cards[i].style.transform = ``;
-        }
+// })
+// $body.addEventListener("mouseout", (e) => {
+//     if (!$body.contains(e.toElement)) {
+//         for (var i = 0; i < $cards.length; i++) {
+//             $cards[i].style.transition = `0.2s `;
+//             $cards[i].style.transform = ``;
+//         }
 
-    }
+//     }
 
-})
+// })
 
-for (i = 0; i < $cards.length; i++) {
-    (function es() {
-        var $card = $cards[i];
-        $card.addEventListener("mouseenter", function (e) {
-            // this.style.transform = `rotateY(${xAxes}deg) rotateX(${yAxes}deg)`;
-            $card.querySelector("img").style.transform = "translate3d(0,-20px,170px) rotateZ(-50deg)";
-            $card.querySelector(".title").style.transform = "translateZ(140px)";
-            $card.querySelector(".desc").style.transform = "translateZ(120px)";
-            $card.querySelector(".main-L").style.transform = "translateZ(100px)";
-            $card.querySelector("ul").style.transform = "translateZ(80px)";
-            $card.querySelector("button").style.transform = "translateZ(140px)";
+// for (i = 0; i < $cards.length; i++) {
+//     (function es() {
+//         var $card = $cards[i];
+//         $card.addEventListener("mouseenter", function (e) {
+//             // this.style.transform = `rotateY(${xAxes}deg) rotateX(${yAxes}deg)`;
+//             $card.querySelector("img").style.transform = "translate3d(0,-20px,170px) rotateZ(-50deg)";
+//             $card.querySelector(".title").style.transform = "translateZ(140px)";
+//             $card.querySelector(".desc").style.transform = "translateZ(120px)";
+//             $card.querySelector(".main-L").style.transform = "translateZ(100px)";
+//             $card.querySelector("ul").style.transform = "translateZ(80px)";
+//             $card.querySelector("button").style.transform = "translateZ(140px)";
 
-            console.log("in", e);
+//             console.log("in", e);
 
-        })
-        $card.addEventListener("mouseout", function (e) {
-            if (!$card.contains(e.toElement)) {
+//         })
+//         $card.addEventListener("mouseout", function (e) {
+//             if (!$card.contains(e.toElement)) {
 
-                $card.querySelector("img").style.transform = "";
-                $card.querySelector(".title").style.transform = "";
-                $card.querySelector(".desc").style.transform = "";
-                $card.querySelector(".main-L").style.transform = "";
-                $card.querySelector("ul").style.transform = "";
-                $card.querySelector("button").style.transform = "";
+//                 $card.querySelector("img").style.transform = "";
+//                 $card.querySelector(".title").style.transform = "";
+//                 $card.querySelector(".desc").style.transform = "";
+//                 $card.querySelector(".main-L").style.transform = "";
+//                 $card.querySelector("ul").style.transform = "";
+//                 $card.querySelector("button").style.transform = "";
 
-                console.log("out", e);
-            }
-            // this.style.transform = `rotateY(${xAxes}deg) rotateX(${yAxes}deg)`;
+//                 console.log("out", e);
+//             }
+//             // this.style.transform = `rotateY(${xAxes}deg) rotateX(${yAxes}deg)`;
 
-        })
-    })()
-}
+//         })
+//     })()
+// }
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
         navigator.serviceWorker.register('sw.js').then(function (registration) {
